@@ -4,12 +4,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dress Up Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <audio id="bg-music" src="audio/dressup-game.mp3" loop></audio>
   <h1>Dress Up Game</h1>
 
   <!-- layout wraps BOTH sides -->
@@ -17,34 +19,46 @@
 
     <div class="game-container">
       <div class="character">
-        <img id="base" src="images/body.png" alt="base character">
+        <img id="base" src="images/body1.png" alt="base character">
         <img id="shirt" src="images/shirt1.png" alt="shirt">
         <img id="skirt" src="images/skirt1.png" alt="skirt">
         <img id="shoes" src="images/shoes1.png" alt="shoes">
         <img id="hair" src="images/hair1.png" alt="hair">
+        <img id="purse" src="images/purse1.png" alt="purse">
       </div>
     </div>
 
     <div class="buttons">
-      <h3>Change Shirt</h3>
+      <h3>Skin Tone</h3>
+      <button onclick="changeBody(1)">Skin Tone 1</button>
+      <button onclick="changeBody(2)">Skin Tone 2</button>
+      <button onclick="changeBody(3)">Skin Tone 3</button>
+
+      <h3>Tops</h3>
       <button onclick="changeShirt(1)">Shirt 1</button>
       <button onclick="changeShirt(2)">Shirt 2</button>
       <button onclick="changeShirt(3)">Shirt 3</button>
 
-      <h3>Change Skirt</h3>
+      <h3>Skirts</h3>
       <button onclick="changeSkirt(1)">Skirt 1</button>
       <button onclick="changeSkirt(2)">Skirt 2</button>
       <button onclick="changeSkirt(3)">Skirt 3</button>
 
-      <h3>Change Shoes</h3>
+      <h3>Shoes</h3>
       <button onclick="changeShoes(1)">Shoes 1</button>
       <button onclick="changeShoes(2)">Shoes 2</button>
       <button onclick="changeShoes(3)">Shoes 3</button>
 
-      <h3>Change Hair</h3>
+      <h3>Hair</h3>
       <button onclick="changeHair(1)">Hair 1</button>
       <button onclick="changeHair(2)">Hair 2</button>
       <button onclick="changeHair(3)">Hair 3</button>
+      
+      <h3>Purse</h3>
+      <button onclick="changePurse(1)">Purse 1</button>
+      <button onclick="changePurse(2)">Purse 2</button>
+      <button onclick="changePurse(3)">Purse 3</button>
+
     </div>
 
   </div> <!-- end of .layout -->
